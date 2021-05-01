@@ -113,11 +113,11 @@ app.post(`/account_types/update/:id`, async (req, res) => {
 app.post(`/clients/update/:id`, async (req, res) => {
     let id = req.params.id;
     try{
-        let {first_name,last_name,email,telephone} = req.body;
+        let {first_name,lats_name,email,telephone} = req.body;
         await Clients.update(
             {
                 first_name: first_name,
-                last_name: last_name,
+                lats_name: lats_name,
                 email:email,
                 telephone:telephone
             },
