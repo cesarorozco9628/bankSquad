@@ -1,0 +1,26 @@
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">NAME</th>
+        <th scope="col">DESCRIPTION</th>
+    </tr>
+    </thead>
+    <tbody>
+        <% accountTypes.forEach((accountTypes) => { %>
+            <tr>
+                <th scope="row"><%= accountTypes.id %></th>
+                <td><%= accountTypes.name %></td>
+                <td><%= accountTypes.description %></td>
+                <td>
+                    <a href="/account_types/update/<%= accountTypes.id %>">
+                        <button class="btn bg-boton-update">Update</button>
+                    </a>
+                    <a href="/account_types/delete/<%= accountTypes.id %>">
+                        <button class="btn bg-boton-delete">Delete</button>
+                    </a>
+                </td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>

@@ -1,0 +1,32 @@
+<div class="container">
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Telephone</th>
+        </tr>
+        </thead>
+        <tbody>
+            <% clients.forEach((client) => { %>
+                <tr>
+                    <th scope="row"><%= client.id %></th>
+                    <td scope="row"><%= client.first_name%></td>
+                    <td scope="row"><%= client.lats_name %></td>
+                    <td scope="row"><%= client.email %></td>
+                    <td scope="row"><%= client.telephone %></td>
+                    <td>
+                        <a href="/clients/update/<%= client.id %>">
+                            <button class="btn bg-boton-update">Update</button>
+                        </a>
+                        <a href="/clients/delete/<%= client.id %>">
+                            <button class="btn bg-boton-delete">Delete</button>
+                        </a>
+                    </td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</div>
