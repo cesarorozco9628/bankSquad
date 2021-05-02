@@ -4,6 +4,7 @@ const app = express();
 const {AccountTypes, Clients} = require('./models');
 
 app.use(express.urlencoded({ extended: true }));
+app.use(express.favicon(__dirname + '/image/favicon.png'));
 app.set('view engine', 'ejs');
 
 
