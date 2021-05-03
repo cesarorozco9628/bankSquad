@@ -6,7 +6,7 @@
     <%- include('partials/navigation'); -%>
     
     <section class="marginSection">
-        <div class="container" style="text-align: center;">
+        <!-- <div class="container" style="text-align: center;">
             <h1>Datos Anteriores</h1>
             <div>
                 <table class="table">
@@ -30,7 +30,7 @@
                     </tbody>
                 </table>
             </div>
-        </div>
+        </div> -->
         <div class="container">
             <h2 style="margin-top: 30px; text-align: center;">
                 Ingresa los datos que deseas actualizar!!
@@ -38,19 +38,19 @@
             <form action="/clients/update/<%= data.id %>" method="post">
                 <div class="mb-3">
                     <label for="inputName" class="form-label">First Name</label>
-                    <input type="text" name="first_name" class="form-control" id="firstName" required>
+                    <input type="text" name="first_name" class="form-control" id="firstName" value="<%= data.first_name %>" required>
                 </div>
                 <div class="mb-3">
                     <label for="lastName" class="form-label">Last Name</label>
-                    <input class="form-control" name="lats_name" id="lastName" rows="3" required/>
+                    <input class="form-control" name="lats_name" id="lastName" rows="3" value="<%= data.lats_name %>" required/>
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-label">Email</label>
-                    <input class="form-control" name="email" id="email" rows="3" required/>
+                    <input type="email" class="form-control" name="email" id="email" rows="3"  value="<%= data.email %>" required/>
                 </div>
                 <div class="mb-3">
                     <label for="telephone" class="form-label">Telephone</label>
-                    <input class="form-control" name="telephone" id="telephone" rows="3" required/>
+                    <input type="number" class="form-control" name="telephone" id="telephone" rows="3" value="<%= data.telephone %>" required/>
                 </div>
                 <button type="submit" class="btn bg-boton">Update</button>
               </form>
