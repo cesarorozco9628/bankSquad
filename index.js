@@ -4,7 +4,7 @@ const app = express();
 const {AccountTypes, Clients} = require('./models');
 
 app.use(express.urlencoded({ extended: true }));
-app.use('/' ,express.static('public'));
+app.use(express.static('styles.css'));
 app.set('view engine', 'ejs');
 
 
