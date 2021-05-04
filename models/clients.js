@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
     first_name: DataTypes.STRING,
     lats_name: DataTypes.STRING,
     email: DataTypes.STRING,
-    telephone: DataTypes.INTEGER
+    telephone: DataTypes.BIGINTEGER
   }, {
     sequelize,
     underscored: true,
